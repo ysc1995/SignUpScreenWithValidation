@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/holo_purple"
     tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/userNameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="53dp"
-        android:layout_marginTop="77dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="96dp"
         android:ems="10"
-        android:hint="Put User Name"
+        android:hint="Put 3-10 digs User Name"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,6 +27,7 @@
         android:ems="10"
         android:hint="Put 6-18 digits Password"
         android:inputType="textPersonName"
+
         app:layout_constraintStart_toStartOf="@+id/emailText"
         app:layout_constraintTop_toBottomOf="@+id/emailText" />
 
@@ -34,6 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:background="@android:color/holo_blue_dark"
         android:text="SignUp"
         app:layout_constraintStart_toStartOf="@+id/dobText"
         app:layout_constraintTop_toBottomOf="@+id/dobText" />
@@ -55,8 +58,20 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="23dp"
         android:ems="10"
-        android:hint="Put Dob"
+        android:hint="Dob (m-d-y)"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="@+id/passText"
         app:layout_constraintTop_toBottomOf="@+id/passText" />
+
+    <TextView
+        android:id="@+id/companyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="21dp"
+        android:layout_marginTop="16dp"
+        android:text="Uber"
+        android:textSize="50dp"
+        android:textColor="@android:color/holo_blue_dark"
+        app:layout_constraintEnd_toEndOf="@+id/userNameText"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

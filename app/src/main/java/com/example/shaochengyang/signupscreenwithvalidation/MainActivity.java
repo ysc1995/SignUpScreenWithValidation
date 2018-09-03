@@ -1,7 +1,10 @@
 package com.example.shaochengyang.signupscreenwithvalidation;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         button = findViewById(R.id.button);
         userText=findViewById(R.id.userNameText);
         passwordText=findViewById(R.id.passText);
+        //passwordText.setAlpha(0.0f);
+        passwordText.setTransformationMethod(PasswordTransformationMethod.getInstance());
         dobText = findViewById(R.id.dobText);
         emailText = findViewById(R.id.emailText);
 
@@ -31,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 String username, password, dob,email;
                 username=userText.getText().toString();
                 password=passwordText.getText().toString();
+
                 dob=dobText.getText().toString();
                 email=emailText.getText().toString();
 
@@ -56,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
 
                 else{
                     Toast.makeText(getApplicationContext(),"signup success!",Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(MainActivity.this,Success.class);
+                    startActivity(i);
                 }
 
 
